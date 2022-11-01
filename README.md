@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-html-css-javascript-YEH8HG-8sx)
-- Live Site URL: (https://base-apparel-coming-soon-page-rafael.netlify.app)
+- Solution URL: https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-html-css-javascript-YEH8HG-8sx
+- Live Site URL: https://base-apparel-coming-soon-page-rafael.netlify.app
 
 ## My process
 
