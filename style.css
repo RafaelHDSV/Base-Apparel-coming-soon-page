@@ -1,0 +1,249 @@
+:root {
+    --desaturated_red: hsl(0, 36%, 70%);
+    --soft_red: hsl(0, 93%, 68%);
+    --dark_grayish_red: hsl(0, 6%, 24%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.logo {
+    position: absolute;
+    top: 3rem;
+    left: 10rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+    height: 100vh;
+    padding: 10rem 3rem 7rem 10rem;
+    gap: 7rem;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main_text h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    max-width: 28rem;
+    color: var(--dark_grayish_red);
+}
+
+.main_text h1 strong {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4.375rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: var(--desaturated_red);
+}
+
+.main_text p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 2rem;
+    max-width: 30rem;
+    color: var(--desaturated_red);
+}
+
+.hero_desktop {
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero_mobile {
+    display: none;
+    opacity: 0;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    max-width: 30rem;
+    position: relative;
+}
+
+.input input:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 1.2rem 0 1.2rem 2rem;
+    border-radius: 3rem;
+    border: 1px solid #c6c6c6;
+    outline: 0;
+}
+
+.input input:nth-child(1)::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2rem;
+    color: #c6c6c6;
+}
+
+#icon_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    right: 7.5rem;
+    opacity: 1;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.btn_primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    min-width: 7rem;
+    border-radius: 3rem;
+    border: none;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transition: 1s all ease;
+    cursor: pointer;
+}
+
+.btn_primary:hover {
+    background-image: linear-gradient(135deg, hsl(0, 52%, 89%), hsl(0, 58%, 86%));
+    transform: scale(110%);
+}
+
+#msg_error {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--soft_red);
+    position: absolute;
+    bottom: -2rem;
+    left: 2rem;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 950px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        flex-direction: column;
+        justify-content: center;
+        max-height: 100vh;
+        width: 100%;
+    }
+
+    .logo {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        width: 100%;
+        height: 6rem;
+    }
+
+    .hero_desktop {
+        display: none;
+        opacity: 0;
+    }
+
+    .hero_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        height: 35rem;
+        object-fit: cover;
+        opacity: 1;
+        order: 1;
+        margin-top: 50%;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        padding: 4rem;
+        text-align: center;
+        order: 2;
+    }
+
+    .main_text h1 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+    }
+
+    .main_text h1 strong {
+        font-size: 3.375rem;
+        text-align: center;
+    }
+
+    .main_text h1,
+    .main_text p,
+    .input {
+        max-width: 100%;
+    }
+}
